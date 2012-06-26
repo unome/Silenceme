@@ -12,6 +12,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
+import android.provider.CalendarContract.Events;
 import android.provider.CalendarContract.Instances;
 import android.util.Log;
 
@@ -37,15 +38,16 @@ public class SetSilentAll extends IntentService{
 		Calendar endTime = Calendar.getInstance();
 		endTime.set(2090, 10, 24, 8, 0);
 		long endMillis = endTime.getTimeInMillis();
-		Uri.Builder builder = Instances.CONTENT_URI.buildUpon();
+		Uri.Builder builder = Events.CONTENT_URI.buildUpon();
 		ContentUris.appendId(builder, startMillis);
 		ContentUris.appendId(builder, endMillis);
 		String[] INSTANCE_PROJECTION = new String[] { // SEt all the columns you
 				// need to extract
-				Instances.EVENT_ID, // 0
-				Instances.TITLE, // 1
-				Instances.BEGIN, // 2
-				Instances.END // 3
+				Events._ID, // 0
+				Events.TITLE, // 1
+				Events.DTSTART, // 2
+				Events.DTEND,// 3
+				Events.CALENDAR_ID
 		};
 		Cursor eventCursor = cr.query(builder.build(), INSTANCE_PROJECTION,
 				null, null, null);
@@ -55,6 +57,7 @@ public class SetSilentAll extends IntentService{
 				String event_id = eventCursor.getString(0);
 				Date begin = new Date(eventCursor.getLong(2));
 				Date end = new Date(eventCursor.getLong(3));
+				String calId=eventCursor.getString(4);
 				addToEventTable(event_id,"**null**");
 				Intent intent = new Intent(this, SilencePhone.class);
 				intent.putExtra("keyword","**null**");
