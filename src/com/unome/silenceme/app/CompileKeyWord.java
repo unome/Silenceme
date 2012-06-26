@@ -16,6 +16,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.CalendarContract.Events;
 import android.provider.CalendarContract.Instances;
 import android.util.Log;
 
@@ -49,7 +50,7 @@ public class CompileKeyWord extends IntentService
 		ContentUris.appendId(builder, endMillis);
 		String[] INSTANCE_PROJECTION = new String[] { // Set all the columns you
 				// need to extract
-				Instances.EVENT_ID, // 0
+				Events._ID, // 0
 				Instances.TITLE, // 1
 				Instances.BEGIN, // 2
 				Instances.END // 3
