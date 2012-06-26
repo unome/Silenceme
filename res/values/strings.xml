@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, SilenceMeActivity!</string>
+    <string name="app_name">SilenceMe(Beta)</string>
+    <string name="addKw">Add a new keyword</string>
+    <string name="enter">Enter</string>
+    <string name="displayKw">Display all keywords</string>
+    <string name="allKw">All keywords</string>
+    <string name="enable">Enable</string>
+    <string name="delete">Delete</string>
+    <string name="disable">Disable</string>
+	<string name="helpText">
+  <![CDATA[
+    <p>SilenceMe allows you to automatically set the phone in silent or vibrate mode,when an event in calendar has started.For example, If you want to silence the phone whenever there is a meeting ,just enter the word &lsquo;meeting&lsquo; as the keyword and make sure the title of the event contains the word, &lsquo;meeting&lsquo;.</p>
+    <p>The &lsquo;Display all keywords&lsquo; button helps you to organize all the keywords that you have entered into the application. You can either disable,enable or delete them. The buttons are visible once the keywords are selected</p>
+    <p>The phone can be made to set to silent or vibrate as per your liking, whose setting can be found in the settings menu.</p></p>Hit the back button to close this dialog</p>
+]]>
+</string> 
+</resources>

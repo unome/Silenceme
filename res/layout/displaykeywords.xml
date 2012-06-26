@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <GridLayout
+        android:id="@+id/tableParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.17"
+        android:columnCount="19" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_columnSpan="5"
+            android:layout_gravity="left"
+            android:layout_row="0"
+            android:text="@string/allKw"
+            android:textSize="18dip" />
+
+        <Button
+            android:id="@+id/button_disable"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_column="0"
+            android:layout_gravity="bottom"
+            android:layout_row="1"
+            android:onClick="onClickHandler"
+            android:text="@string/disable" />
+
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="match_parent"
+            android:layout_height="382dp"
+            android:layout_column="0"
+            android:layout_columnSpan="4"
+            android:layout_gravity="fill_horizontal"
+            android:layout_row="1" >
+
+            <TableLayout
+                android:id="@+id/kwTable"
+                android:layout_width="match_parent"
+                android:layout_height="384dp" >
+            </TableLayout>
+        </ScrollView>
+
+        <Button
+            android:id="@+id/enable_button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_column="2"
+            android:layout_gravity="bottom"
+            android:layout_row="1"
+            android:onClick="onClickHandler"
+            android:text="@string/enable" />
+
+        <Button
+            android:id="@+id/deleteButton"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_column="3"
+            android:layout_gravity="bottom|right"
+            android:layout_row="1"
+            android:onClick="onClickHandler"
+            android:text="@string/delete" />
+
+        <Space
+            android:layout_width="1dp"
+            android:layout_height="21dp"
+            android:layout_column="0"
+            android:layout_gravity="fill_horizontal"
+            android:layout_row="0" />
+
+        <Space
+            android:layout_width="64dp"
+            android:layout_height="1dp"
+            android:layout_column="1"
+            android:layout_row="0" />
+
+        <Space
+            android:layout_width="85dp"
+            android:layout_height="1dp"
+            android:layout_column="2"
+            android:layout_row="0" />
+
+        <Space
+            android:layout_width="89dp"
+            android:layout_height="1dp"
+            android:layout_column="3"
+            android:layout_row="0" />
+    </GridLayout>
+
+</LinearLayout>
