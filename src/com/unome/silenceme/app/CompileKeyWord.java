@@ -45,15 +45,16 @@ public class CompileKeyWord extends IntentService
 		Calendar endTime = Calendar.getInstance();
 		endTime.set(2090, 10, 24, 8, 0);
 		long endMillis = endTime.getTimeInMillis();
-		Uri.Builder builder = Instances.CONTENT_URI.buildUpon();
+		Uri.Builder builder = Events.CONTENT_URI.buildUpon();
 		ContentUris.appendId(builder, startMillis);
 		ContentUris.appendId(builder, endMillis);
 		String[] INSTANCE_PROJECTION = new String[] { // Set all the columns you
 				// need to extract
 				Events._ID, // 0
-				Instances.TITLE, // 1
-				Instances.BEGIN, // 2
-				Instances.END // 3
+				Events.TITLE, // 1
+				Events.DTSTART, // 2
+				Events.DTEND,// 3
+				Events.CALENDAR_ID
 		};
 		Cursor eventCursor = cr.query(builder.build(), INSTANCE_PROJECTION,
 				null, null,null);
@@ -64,6 +65,7 @@ public class CompileKeyWord extends IntentService
 				String title = eventCursor.getString(1);
 				Date begin = new Date(eventCursor.getLong(2));
 				Date end = new Date(eventCursor.getLong(3));
+				String calId = eventCursor.getString(4);
 				StringTokenizer st = new StringTokenizer(title.toLowerCase());
 				boolean occured=false;
 				while(st.hasMoreTokens()&&!occured)
