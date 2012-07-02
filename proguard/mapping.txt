@@ -18,7 +18,7 @@ com.unome.silenceme.app.CompileKeyWord -> com.unome.silenceme.app.CompileKeyWord
     com.unome.silenceme.app.DBhelper dbhelper -> b
     void onStart(android.content.Intent,int) -> onStart
     void onHandleIntent(android.content.Intent) -> onHandleIntent
-    void addToEventTable(java.lang.String,java.lang.String) -> a
+    void addToEventTable(java.lang.String,java.lang.String,android.database.sqlite.SQLiteDatabase) -> a
 com.unome.silenceme.app.DBhelper -> b:
     android.content.Context context -> a
     void onCreate(android.database.sqlite.SQLiteDatabase) -> onCreate
@@ -40,7 +40,7 @@ com.unome.silenceme.app.DisplayKeywords$1 -> c:
     android.widget.Button val$delBut -> b
     android.widget.Button val$disBut -> c
     android.widget.Button val$enaBut -> d
-    void onClick(android.view.View) -> onClick
+    void onCheckedChanged(android.widget.CompoundButton,boolean) -> onCheckedChanged
 com.unome.silenceme.app.SetBack -> com.unome.silenceme.app.SetBack:
     java.lang.String TAG -> a
     void onReceive(android.content.Context,android.content.Intent) -> onReceive
@@ -52,9 +52,17 @@ com.unome.silenceme.app.SetSilentAll -> com.unome.silenceme.app.SetSilentAll:
     com.unome.silenceme.app.DBhelper dbhelper -> b
     void onStart(android.content.Intent,int) -> onStart
     void onHandleIntent(android.content.Intent) -> onHandleIntent
-    void addToEventTable(java.lang.String,java.lang.String) -> a
+    void addToEventTable(java.lang.String,java.lang.String,android.database.sqlite.SQLiteDatabase) -> a
 com.unome.silenceme.app.SettingsActivity -> com.unome.silenceme.app.SettingsActivity:
+    java.util.ArrayList checked -> a
+    java.util.ArrayList calIds -> b
+    com.unome.silenceme.app.DBhelper dbhelper -> c
+    java.lang.String TAG -> d
     void onCreate(android.os.Bundle) -> onCreate
+    void displayCalendars() -> a
+    void onBackPressed() -> onBackPressed
+    void onClickHandler(android.view.View) -> onClickHandler
+    void access$0(com.unome.silenceme.app.SettingsActivity) -> a
 com.unome.silenceme.app.SettingsActivity$1 -> d:
     com.unome.silenceme.app.SettingsActivity this$0 -> a
     android.widget.RadioButton val$rBVibrate -> b
@@ -65,17 +73,40 @@ com.unome.silenceme.app.SettingsActivity$2 -> e:
     android.widget.RadioButton val$rBSilent -> b
     android.content.SharedPreferences val$wmbPreference -> c
     void onClick(android.view.View) -> onClick
+com.unome.silenceme.app.SettingsActivity$3 -> f:
+    com.unome.silenceme.app.SettingsActivity this$0 -> a
+    android.widget.RadioButton val$rbSelectedCal -> b
+    android.content.SharedPreferences val$wmbPreference -> c
+    void onClick(android.view.View) -> onClick
+com.unome.silenceme.app.SettingsActivity$4 -> g:
+    com.unome.silenceme.app.SettingsActivity this$0 -> a
+    android.widget.RadioButton val$rbAllCal -> b
+    android.content.SharedPreferences val$wmbPreference -> c
+    void onClick(android.view.View) -> onClick
+com.unome.silenceme.app.SettingsActivity$5 -> h:
+    com.unome.silenceme.app.SettingsActivity this$0 -> a
+    android.widget.RadioButton val$rbBusyNo -> b
+    android.content.SharedPreferences val$wmbPreference -> c
+    void onClick(android.view.View) -> onClick
+com.unome.silenceme.app.SettingsActivity$6 -> i:
+    com.unome.silenceme.app.SettingsActivity this$0 -> a
+    android.widget.RadioButton val$rbBusyYes -> b
+    android.content.SharedPreferences val$wmbPreference -> c
+    void onClick(android.view.View) -> onClick
+com.unome.silenceme.app.SettingsActivity$7 -> j:
+    com.unome.silenceme.app.SettingsActivity this$0 -> a
+    void onCheckedChanged(android.widget.CompoundButton,boolean) -> onCheckedChanged
 com.unome.silenceme.app.SilenceMeActivity -> com.unome.silenceme.app.SilenceMeActivity:
     com.unome.silenceme.app.DBhelper dbhelper -> a
     java.lang.String TAG -> b
     void onCreate(android.os.Bundle) -> onCreate
     void onClickHandler(android.view.View) -> onClickHandler
-com.unome.silenceme.app.SilenceMeActivity$1 -> f:
+com.unome.silenceme.app.SilenceMeActivity$1 -> k:
     com.unome.silenceme.app.SilenceMeActivity this$0 -> a
     android.widget.RadioButton val$rBNoSilenceAll -> b
     android.content.SharedPreferences val$wmbPreference -> c
     void onClick(android.view.View) -> onClick
-com.unome.silenceme.app.SilenceMeActivity$2 -> g:
+com.unome.silenceme.app.SilenceMeActivity$2 -> l:
     com.unome.silenceme.app.SilenceMeActivity this$0 -> a
     android.widget.RadioButton val$rBSilenceAll -> b
     android.content.SharedPreferences val$wmbPreference -> c

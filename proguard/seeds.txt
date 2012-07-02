@@ -7,6 +7,7 @@ com.unome.silenceme.app.R$drawable: int helpdialog
 com.unome.silenceme.app.R$drawable: int ic_launcher
 com.unome.silenceme.app.R$drawable: int ic_menu_name
 com.unome.silenceme.app.R$drawable: int silencemeicon
+com.unome.silenceme.app.R$id: int buttonWriteReview
 com.unome.silenceme.app.R$id: int button_disable
 com.unome.silenceme.app.R$id: int deleteButton
 com.unome.silenceme.app.R$id: int displayKeywords
@@ -17,13 +18,21 @@ com.unome.silenceme.app.R$id: int keywordText
 com.unome.silenceme.app.R$id: int kwTable
 com.unome.silenceme.app.R$id: int rB_NoSilenceAll
 com.unome.silenceme.app.R$id: int rB_SilenceAll
+com.unome.silenceme.app.R$id: int rB_allCal
+com.unome.silenceme.app.R$id: int rB_selectedCal
 com.unome.silenceme.app.R$id: int rButtonSilent
 com.unome.silenceme.app.R$id: int rButtonVibrate
+com.unome.silenceme.app.R$id: int rbBusyNo
+com.unome.silenceme.app.R$id: int rbBusyYes
 com.unome.silenceme.app.R$id: int scrollView1
+com.unome.silenceme.app.R$id: int scrollView2
 com.unome.silenceme.app.R$id: int settingsButton
+com.unome.silenceme.app.R$id: int tL_accTable
 com.unome.silenceme.app.R$id: int tableParent
 com.unome.silenceme.app.R$id: int textView1
 com.unome.silenceme.app.R$id: int textView2
+com.unome.silenceme.app.R$id: int textView3
+com.unome.silenceme.app.R$id: int textView4
 com.unome.silenceme.app.R$id: int textViewHelp
 com.unome.silenceme.app.R$layout: int displaykeywords
 com.unome.silenceme.app.R$layout: int helpfile
@@ -43,6 +52,7 @@ com.unome.silenceme.app.SetBack
 com.unome.silenceme.app.SetBackService
 com.unome.silenceme.app.SetSilentAll
 com.unome.silenceme.app.SettingsActivity
+com.unome.silenceme.app.SettingsActivity: void onClickHandler(android.view.View)
 com.unome.silenceme.app.SilenceMeActivity
 com.unome.silenceme.app.SilenceMeActivity: void onClickHandler(android.view.View)
 com.unome.silenceme.app.SilencePhone

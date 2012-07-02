@@ -14,7 +14,7 @@ import android.widget.Toast;
 public class DBhelper extends SQLiteOpenHelper{
 	public static final String TAG="Silenceme";
 	public static final String DB_NAME = "Silenceme.db";
-	public static final int DB_VERSION = 1;
+	public static final int DB_VERSION = 2;
 	static final String kwTName="keywords";
 	public static final String C_KName="keyword";
 	public static final String C_KStatus="status";
@@ -22,7 +22,7 @@ public class DBhelper extends SQLiteOpenHelper{
 	public static final String calTName="calendarEventsTable";
 	public static final String calEventId="eventId";
 	public static final String allCalendarsTable = "allCalTable";
-	public static final String calName = "CalendarName";
+	public static final String calId = "CalendarId";
 	Context context;
 	public DBhelper(Context context) { //
 		super(context, DB_NAME, null, DB_VERSION);
@@ -34,19 +34,25 @@ public class DBhelper extends SQLiteOpenHelper{
 
 	@Override
 	public void onCreate(SQLiteDatabase db) {
-		String sql = "CREATE TABLE " + kwTName + " (" + C_id + " INTEGER PRIMARY KEY AUTOINCREMENT, " 
+		String sql = "CREATE TABLE IF NOT EXISTS " + kwTName + " (" + C_id + " INTEGER PRIMARY KEY AUTOINCREMENT, " 
 				+ C_KName + " TEXT NOT NULL, " + C_KStatus + " TEXT NOT NULL)"; 	// Database creation sql statement
 		db.execSQL(sql); //Actual sql command to create the table in sqlite
-		sql="CREATE TABLE "+calTName+"("+calEventId+" INTEGER PRIMARY KEY, "+C_KName+ " TEXT NOT NULL)";
+		sql="CREATE TABLE IF NOT EXISTS "+calTName+"("+calEventId+" INTEGER PRIMARY KEY, "+C_KName+ " TEXT NOT NULL)";
 		db.execSQL(sql);
+		sql = "CREATE TABLE IF NOT EXISTS " + allCalendarsTable + " (" + C_id + " INTEGER PRIMARY KEY AUTOINCREMENT, " 
+				+ calId + " INTEGER)";
+		db.execSQL(sql);
+		//db.close();
 	}
 
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 		// Typically do ALTER TABLE statements, but...we're just in development, // so:
-		db.execSQL("drop table if exists " + kwTName); // drops the old database 
-		Log.d(TAG, "onUpdated");
-		onCreate(db); // run onCreate to get new database
+		String sql = "CREATE TABLE " + allCalendarsTable + " (" + C_id + " INTEGER PRIMARY KEY AUTOINCREMENT, " 
+				+ calId + " INTEGER)";
+		db.execSQL(sql);
+		//db.close();
+		//onCreate(db); // run onCreate to get new database
 	}
 	public int add(Context context,Editable kName){
 

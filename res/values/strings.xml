@@ -14,7 +14,12 @@
   <![CDATA[
     <p>SilenceMe allows you to automatically set the phone in silent or vibrate mode,when an event in calendar has started.For example, If you want to silence the phone whenever there is a meeting ,just enter the word &lsquo;meeting&lsquo; as the keyword and make sure the title of the event contains the word, &lsquo;meeting&lsquo;.</p>
     <p>The &lsquo;Display all keywords&lsquo; button helps you to organize all the keywords that you have entered into the application. You can either disable,enable or delete them. The buttons are visible once the keywords are selected</p>
-    <p>The phone can be made to set to silent or vibrate as per your liking, whose setting can be found in the settings menu.</p></p>Hit the back button to close this dialog</p>
+    <p>Settings for various customizations can be found in the settings menu.</p></p>Hit the back button to close this dialog</p>
+]]>
+</string> 
+	<string name="introText">
+  <![CDATA[
+    <p>New features in this update include an option to select the calendars that need to be monitored for events.</p><p>Also a new option has been added to silence your phone only when you are busy for availability.</p><p>These settings can be found in the setting menu and for help with the application click the help icon</p><p>Hit the back button to close this dialog</p>
 ]]>
 </string> 
 </resources>

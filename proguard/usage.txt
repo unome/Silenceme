@@ -1,5 +1,9 @@
 android.annotation.SuppressLint
 android.annotation.TargetApi
+com.unome.silenceme.app.AppRater
+com.unome.silenceme.app.AppRater$1
+com.unome.silenceme.app.AppRater$2
+com.unome.silenceme.app.AppRater$3
 com.unome.silenceme.app.BuildConfig
 com.unome.silenceme.app.CalendarObserver:
     21:22:public CalendarObserver(android.os.Handler)
@@ -14,7 +18,7 @@ com.unome.silenceme.app.DBhelper:
     public static final java.lang.String calTName
     public static final java.lang.String calEventId
     public static final java.lang.String allCalendarsTable
-    public static final java.lang.String calName
+    public static final java.lang.String calId
 com.unome.silenceme.app.R
 com.unome.silenceme.app.R$attr
 com.unome.silenceme.app.R$drawable

@@ -15,10 +15,12 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.GridLayout;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
+import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.TableRow.LayoutParams;
 
 public class DisplayKeywords extends Activity 
@@ -53,18 +55,27 @@ public class DisplayKeywords extends Activity
 					LayoutParams.WRAP_CONTENT));
 			CheckBox cBox = new CheckBox(this);
 			cBox.setTag("cB" + sqlIt.getString(1));
-			cBox.setOnClickListener(new View.OnClickListener() {
+			cBox.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 				@Override
-				public void onClick(View v) {
-					delBut.setVisibility(View.VISIBLE);
-					disBut.setVisibility(View.VISIBLE);
-					enaBut.setVisibility(View.VISIBLE);
-					TableRow currRow = (TableRow) v.getParent(); // getParent returns the parent
-					ArrayList<View> allViews = new ArrayList<View>();
-					allViews = currRow.getTouchables();
-					TextView tName = (TextView) (allViews.get(1));
-					checked.add((String) tName.getText());
-
+				public void onCheckedChanged(CompoundButton v,boolean isChecked) {
+					if(isChecked){
+						delBut.setVisibility(View.VISIBLE);
+						disBut.setVisibility(View.VISIBLE);
+						enaBut.setVisibility(View.VISIBLE);
+						TableRow currRow = (TableRow) v.getParent(); // getParent returns the parent
+						ArrayList<View> allViews = new ArrayList<View>();
+						allViews = currRow.getTouchables();
+						TextView tName = (TextView) (allViews.get(1));
+						checked.add((String) tName.getText());
+					}
+					if(!isChecked)
+					{
+						TableRow currRow = (TableRow) v.getParent(); // getParent returns the parent
+						ArrayList<View> allViews = new ArrayList<View>();
+						allViews = currRow.getTouchables();
+						TextView tName = (TextView) (allViews.get(1));
+						checked.remove((String) tName.getText());
+					}
 				}
 			});
 			tbrow.addView(cBox);
@@ -96,8 +107,8 @@ public class DisplayKeywords extends Activity
 		}
 		if(view.getId()==R.id.enable_button)
 			enableKeyWords();
-        Intent changeIntent=new Intent(view.getContext(),CalendarObserverService.class);
-        view.getContext().startService(changeIntent);
+		Intent changeIntent=new Intent(view.getContext(),CalendarObserverService.class);
+		view.getContext().startService(changeIntent);
 	}
 
 	private void enableKeyWords()

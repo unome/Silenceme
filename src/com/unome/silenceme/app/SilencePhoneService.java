@@ -68,7 +68,7 @@ public class SilencePhoneService extends IntentService{
 		}
 		int phoneStatus = wmbPreference.getInt("desiredPhState", -1);
 		audiomanage.setRingerMode(phoneStatus);
-		//Log.d(TAG,"Phone has been set to silent");
+		Log.d(TAG,"Phone has been set to silent");
 		Intent backintent = new Intent(this,SetBack.class);
 		PendingIntent sender = PendingIntent.getBroadcast(this, 192837, backintent, PendingIntent.FLAG_UPDATE_CURRENT);
 		AlarmManager am1 = (AlarmManager)this.getSystemService(Context.ALARM_SERVICE);

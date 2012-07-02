@@ -28,22 +28,25 @@ public class SilenceMeActivity extends Activity {
 		final RadioButton rBNoSilenceAll=(RadioButton)findViewById(R.id.rB_NoSilenceAll);
 		dbhelper = new DBhelper(this);
 		final SharedPreferences wmbPreference = PreferenceManager.getDefaultSharedPreferences(this);
-		boolean isFirstRun = wmbPreference.getBoolean("FIRSTRUN", true);
-		if (isFirstRun)
+		boolean isv2Run = wmbPreference.getBoolean("v2Run", true);
+		if (isv2Run)
 		{
 			//start a service.
 			this.startService(new Intent(this,CalendarChangeService.class));
 			SharedPreferences.Editor editor = wmbPreference.edit();
-			editor.putBoolean("FIRSTRUN", false);
+			editor.putBoolean("v2Run", false);
 			editor.putInt("CurrPhState",-1);
 			editor.putInt("allEvents",0);//To maintain the current Status
 			editor.putInt("currentEventId", -1);
 			editor.putInt("desiredPhState", 1);
+			editor.putInt("monitorCal", 0);
+			editor.putInt("monitorBusy",0);
+			editor.putInt("reviewDone", 0);
 			editor.commit();
 			final Dialog dialog = new Dialog(this);
 			dialog.setContentView(R.layout.helpfile);
 			TextView helpText = (TextView)dialog.findViewById(R.id.textViewHelp);
-			helpText.setText(Html.fromHtml(getString(R.string.helpText)));
+			helpText.setText(Html.fromHtml(getString(R.string.introText)));
 			dialog.setTitle("Introduction");
 			dialog.show();
 

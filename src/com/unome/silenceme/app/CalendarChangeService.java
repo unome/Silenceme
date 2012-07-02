@@ -5,7 +5,7 @@ package com.unome.silenceme.app;
 import android.app.Service;
 import android.content.Intent;
 import android.os.IBinder;
-import android.provider.CalendarContract.Instances;
+import android.provider.CalendarContract.Events;
 
 public class CalendarChangeService extends Service{
 
@@ -17,7 +17,7 @@ public class CalendarChangeService extends Service{
 	@Override
 	public void onCreate() {
 		super.onCreate();
-		this.getContentResolver().registerContentObserver(Instances.CONTENT_URI,true,new CalendarObserver(this));
+		this.getContentResolver().registerContentObserver(Events.CONTENT_URI,true,new CalendarObserver(this));
 	}
 
 	@Override
@@ -28,7 +28,7 @@ public class CalendarChangeService extends Service{
 	@Override
 	public void onStart(Intent intent, int startId) {
 		super.onStart(intent, startId);
-		this.getContentResolver().registerContentObserver(Instances.CONTENT_URI,true,new CalendarObserver(this));
+		this.getContentResolver().registerContentObserver(Events.CONTENT_URI,true,new CalendarObserver(this));
 
 	}
 
