@@ -1,9 +1,5 @@
 android.annotation.SuppressLint
 android.annotation.TargetApi
-com.unome.silenceme.app.AppRater
-com.unome.silenceme.app.AppRater$1
-com.unome.silenceme.app.AppRater$2
-com.unome.silenceme.app.AppRater$3
 com.unome.silenceme.app.BuildConfig
 com.unome.silenceme.app.CalendarObserver:
     21:22:public CalendarObserver(android.os.Handler)

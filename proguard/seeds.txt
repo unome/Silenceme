@@ -48,6 +48,7 @@ com.unome.silenceme.app.R$string: int enable
 com.unome.silenceme.app.R$string: int enter
 com.unome.silenceme.app.R$string: int hello
 com.unome.silenceme.app.R$string: int helpText
+com.unome.silenceme.app.R$string: int introText
 com.unome.silenceme.app.SetBack
 com.unome.silenceme.app.SetBackService
 com.unome.silenceme.app.SetSilentAll

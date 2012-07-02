@@ -54,10 +54,11 @@ com.unome.silenceme.app.SetSilentAll -> com.unome.silenceme.app.SetSilentAll:
     void onHandleIntent(android.content.Intent) -> onHandleIntent
     void addToEventTable(java.lang.String,java.lang.String,android.database.sqlite.SQLiteDatabase) -> a
 com.unome.silenceme.app.SettingsActivity -> com.unome.silenceme.app.SettingsActivity:
-    java.util.ArrayList checked -> a
-    java.util.ArrayList calIds -> b
-    com.unome.silenceme.app.DBhelper dbhelper -> c
-    java.lang.String TAG -> d
+    boolean settingsChangesMade -> a
+    java.util.ArrayList checked -> b
+    java.util.ArrayList calIds -> c
+    com.unome.silenceme.app.DBhelper dbhelper -> d
+    java.lang.String TAG -> e
     void onCreate(android.os.Bundle) -> onCreate
     void displayCalendars() -> a
     void onBackPressed() -> onBackPressed

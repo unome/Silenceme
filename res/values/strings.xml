@@ -19,7 +19,7 @@
 </string> 
 	<string name="introText">
   <![CDATA[
-    <p>New features in this update include an option to select the calendars that need to be monitored for events.</p><p>Also a new option has been added to silence your phone only when you are busy for availability.</p><p>These settings can be found in the setting menu and for help with the application click the help icon</p><p>Hit the back button to close this dialog</p>
+    <p>New features in this update include an option to select the calendars that need to be monitored for events.</p><p>Also a new option has been added to silence your phone only when you are busy for availability.</p><p>These settings can be found in the setting menu and for help with the application click the help icon</p><p>Please leave your feedback for new features or improvements.Hit the back button to close this dialog</p>
 ]]>
 </string> 
 </resources>
