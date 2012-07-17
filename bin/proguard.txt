@@ -1,0 +1,48 @@
+# view AndroidManifest.xml #generated:53
+-keep class com.unome.silenceme.app.CalendarChangeService { <init>(...); }
+
+# view AndroidManifest.xml #generated:50
+-keep class com.unome.silenceme.app.CalendarObserverService { <init>(...); }
+
+# view AndroidManifest.xml #generated:47
+-keep class com.unome.silenceme.app.CompileKeyWord { <init>(...); }
+
+# view AndroidManifest.xml #generated:27
+-keep class com.unome.silenceme.app.DisplayKeywords { <init>(...); }
+
+# view AndroidManifest.xml #generated:32
+-keep class com.unome.silenceme.app.SetBack { <init>(...); }
+
+# view AndroidManifest.xml #generated:44
+-keep class com.unome.silenceme.app.SetBackService { <init>(...); }
+
+# view AndroidManifest.xml #generated:56
+-keep class com.unome.silenceme.app.SetSilentAll { <init>(...); }
+
+# view AndroidManifest.xml #generated:65
+-keep class com.unome.silenceme.app.SettingsActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:17
+-keep class com.unome.silenceme.app.SilenceMeActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:36
+-keep class com.unome.silenceme.app.SilencePhone { <init>(...); }
+
+# view AndroidManifest.xml #generated:41
+-keep class com.unome.silenceme.app.SilencePhoneService { <init>(...); }
+
+# view AndroidManifest.xml #generated:60
+-keep class com.unome.silenceme.app.StartServiceOnBoot { <init>(...); }
+
+# onClick res/layout/displaykeywords.xml #generated:25
+# onClick res/layout/displaykeywords.xml #generated:50
+# onClick res/layout/displaykeywords.xml #generated:59
+# onClick res/layout/main.xml #generated:15
+# onClick res/layout/main.xml #generated:25
+# onClick res/layout/main.xml #generated:56
+# onClick res/layout/main.xml #generated:8
+# onClick res/layout/main.xml #generated:86
+# onClick res/layout/settingsmenu.xml #generated:127
+# onClick res/layout/settingsmenu.xml #generated:2
+-keepclassmembers class * { *** onClickHandler(...); }
+

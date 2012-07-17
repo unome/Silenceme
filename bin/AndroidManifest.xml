@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.unome.silenceme.app"
+    android:versionCode="2"
+    android:versionName="0.8" >
+
+    <uses-permission android:name="android.permission.READ_CALENDAR" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-sdk android:minSdkVersion="14"
+        android:targetSdkVersion="15" />
+    <application
+        android:icon="@drawable/silencemeicon"
+        android:label="@string/app_name" >
+        <activity
+            android:name=".SilenceMeActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Holo.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".DisplayKeywords"
+            android:theme="@android:style/Theme.Holo.NoActionBar" >
+        </activity>
+
+        <receiver
+            android:name=".SetBack"
+            android:process=":remote" >
+        </receiver>
+        <receiver
+            android:name=".SilencePhone"
+            android:process=":remote" >
+        </receiver>
+
+        <service
+            android:name=".SilencePhoneService"
+            android:enabled="true" />
+        <service
+            android:name=".SetBackService"
+            android:enabled="true" />
+        <service
+            android:name=".CompileKeyWord"
+            android:enabled="true" />
+        <service
+            android:name=".CalendarObserverService"
+            android:enabled="true" />
+        <service
+            android:name=".CalendarChangeService"
+            android:enabled="true" />
+        <service
+            android:name=".SetSilentAll"
+            android:enabled="true" />
+
+        <receiver android:name=".StartServiceOnBoot" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <activity android:name=".SettingsActivity"
+            android:theme="@android:style/Theme.Holo.NoActionBar"></activity>
+    </application>
+
+</manifest>
