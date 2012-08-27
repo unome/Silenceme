@@ -6505,7 +6505,7 @@ _____________________________________________________________________
 
 Interfaces (count = 0):
 
-Constant Pool (count = 238):
+Constant Pool (count = 236):
   + Integer [2130903041]
   + Integer [2130903042]
   + Integer [2130968585]
@@ -6532,9 +6532,8 @@ Constant Pool (count = 238):
   + String [monitorBusy]
   + String [monitorCal]
   + String [oldVersionExists]
-  + String [oldVersionExsits]
   + String [reviewDone]
-  + String [v3FirstRun]
+  + String [v4FirstRun]
   + Class [android/app/Activity]
   + Class [android/app/Dialog]
   + Class [android/content/Intent]
@@ -6726,7 +6725,6 @@ Constant Pool (count = 238):
   + Utf8 [monitorBusy]
   + Utf8 [monitorCal]
   + Utf8 [oldVersionExists]
-  + Utf8 [oldVersionExsits]
   + Utf8 [onClickHandler]
   + Utf8 [onCreate]
   + Utf8 [putBoolean]
@@ -6742,7 +6740,7 @@ Constant Pool (count = 238):
   + Utf8 [startActivityForResult]
   + Utf8 [startService]
   + Utf8 [toString]
-  + Utf8 [v3FirstRun]
+  + Utf8 [v4FirstRun]
 
 Fields (count = 2):
   + Field:        a Lb;
@@ -6759,12 +6757,12 @@ Methods (count = 3):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 11, locals = 1, stack = 2):
       [0] aload_0 v0
-      [1] invokespecial #56
+      [1] invokespecial #55
         + Methodref [android/app/Activity.<init> ()V]
       [4] aload_0 v0
       [5] ldc #18
         + String [Silenceme]
-      [7] putfield #55
+      [7] putfield #54
         + Fieldref [com/unome/silenceme/app/SilenceMeActivity.b Ljava/lang/String;]
       [10] return
       Code attribute exceptions (count = 0):
@@ -6776,275 +6774,275 @@ Methods (count = 3):
     + Code attribute instructions (code length = 414, locals = 10, stack = 6):
       [0] aload_0 v0
       [1] aload_1 v1
-      [2] invokespecial #57
+      [2] invokespecial #56
         + Methodref [android/app/Activity.onCreate (Landroid/os/Bundle;)V]
       [5] aload_0 v0
       [6] ldc #2
         + Integer [2130903042]
-      [8] invokevirtual #82
+      [8] invokevirtual #81
         + Methodref [com/unome/silenceme/app/SilenceMeActivity.setContentView (I)V]
       [11] aload_0 v0
       [12] ldc #10
         + Integer [2131034125]
-      [14] invokevirtual #79
+      [14] invokevirtual #78
         + Methodref [com/unome/silenceme/app/SilenceMeActivity.findViewById (I)Landroid/view/View;]
-      [17] checkcast #42
+      [17] checkcast #41
         + Class [android/widget/RadioButton]
       [20] astore_2 v2
       [21] aload_0 v0
       [22] ldc #11
         + Integer [2131034126]
-      [24] invokevirtual #79
+      [24] invokevirtual #78
         + Methodref [com/unome/silenceme/app/SilenceMeActivity.findViewById (I)Landroid/view/View;]
-      [27] checkcast #42
+      [27] checkcast #41
         + Class [android/widget/RadioButton]
       [30] astore_3 v3
       [31] aload_0 v0
-      [32] new #45
+      [32] new #44
         + Class [b]
       [35] dup
       [36] aload_0 v0
-      [37] invokespecial #77
+      [37] invokespecial #76
         + Methodref [b.<init> (Landroid/content/Context;)V]
-      [40] putfield #54
+      [40] putfield #53
         + Fieldref [com/unome/silenceme/app/SilenceMeActivity.a Lb;]
       [43] aload_0 v0
-      [44] invokestatic #65
+      [44] invokestatic #64
         + Methodref [android/preference/PreferenceManager.getDefaultSharedPreferences (Landroid/content/Context;)Landroid/content/SharedPreferences;]
       [47] astore v4
       [49] aload v4
       [51] ldc #26
         + String [oldVersionExists]
       [53] iconst_0
-      [54] invokeinterface #89
+      [54] invokeinterface #88
         + InterfaceMethodref [android/content/SharedPreferences.getBoolean (Ljava/lang/String;Z)Z]
       [59] istore v5
       [61] aload v4
-      [63] ldc #29
-        + String [v3FirstRun]
+      [63] ldc #28
+        + String [v4FirstRun]
       [65] iconst_1
-      [66] invokeinterface #89
+      [66] invokeinterface #88
         + InterfaceMethodref [android/content/SharedPreferences.getBoolean (Ljava/lang/String;Z)Z]
       [71] istore v6
       [73] iload v6
       [75] ifeq +282 (target=357)
       [78] aload v4
-      [80] invokeinterface #88
+      [80] invokeinterface #87
         + InterfaceMethodref [android/content/SharedPreferences.edit ()Landroid/content/SharedPreferences$Editor;]
       [85] astore v7
       [87] iload v5
       [89] ifne +168 (target=257)
       [92] aload v7
-      [94] ldc #29
-        + String [v3FirstRun]
+      [94] ldc #28
+        + String [v4FirstRun]
       [96] iconst_0
-      [97] invokeinterface #92
+      [97] invokeinterface #91
         + InterfaceMethodref [android/content/SharedPreferences$Editor.putBoolean (Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;]
       [102] pop
       [103] aload v7
       [105] ldc #14
         + String [CurrPhState]
       [107] iconst_m1
-      [108] invokeinterface #93
+      [108] invokeinterface #92
         + InterfaceMethodref [android/content/SharedPreferences$Editor.putInt (Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;]
       [113] pop
       [114] aload v7
       [116] ldc #19
         + String [allEvents]
       [118] iconst_0
-      [119] invokeinterface #93
+      [119] invokeinterface #92
         + InterfaceMethodref [android/content/SharedPreferences$Editor.putInt (Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;]
       [124] pop
       [125] aload v7
       [127] ldc #20
         + String [currentEventId]
       [129] iconst_m1
-      [130] invokeinterface #93
+      [130] invokeinterface #92
         + InterfaceMethodref [android/content/SharedPreferences$Editor.putInt (Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;]
       [135] pop
       [136] aload v7
       [138] ldc #21
         + String [desiredPhState]
       [140] iconst_1
-      [141] invokeinterface #93
+      [141] invokeinterface #92
         + InterfaceMethodref [android/content/SharedPreferences$Editor.putInt (Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;]
       [146] pop
       [147] aload v7
       [149] ldc #25
         + String [monitorCal]
       [151] iconst_0
-      [152] invokeinterface #93
+      [152] invokeinterface #92
         + InterfaceMethodref [android/content/SharedPreferences$Editor.putInt (Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;]
       [157] pop
       [158] aload v7
       [160] ldc #24
         + String [monitorBusy]
       [162] iconst_0
-      [163] invokeinterface #93
+      [163] invokeinterface #92
         + InterfaceMethodref [android/content/SharedPreferences$Editor.putInt (Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;]
       [168] pop
       [169] aload v7
-      [171] ldc #28
+      [171] ldc #27
         + String [reviewDone]
       [173] iconst_0
-      [174] invokeinterface #93
+      [174] invokeinterface #92
         + InterfaceMethodref [android/content/SharedPreferences$Editor.putInt (Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;]
       [179] pop
       [180] aload v7
-      [182] ldc #27
-        + String [oldVersionExsits]
+      [182] ldc #26
+        + String [oldVersionExists]
       [184] iconst_1
-      [185] invokeinterface #92
+      [185] invokeinterface #91
         + InterfaceMethodref [android/content/SharedPreferences$Editor.putBoolean (Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;]
       [190] pop
       [191] aload v7
-      [193] invokeinterface #91
+      [193] invokeinterface #90
         + InterfaceMethodref [android/content/SharedPreferences$Editor.commit ()Z]
       [198] pop
-      [199] new #31
+      [199] new #30
         + Class [android/app/Dialog]
       [202] dup
       [203] aload_0 v0
-      [204] invokespecial #58
+      [204] invokespecial #57
         + Methodref [android/app/Dialog.<init> (Landroid/content/Context;)V]
       [207] astore v8
       [209] aload v8
       [211] ldc #1
         + Integer [2130903041]
-      [213] invokevirtual #60
+      [213] invokevirtual #59
         + Methodref [android/app/Dialog.setContentView (I)V]
       [216] aload v8
       [218] ldc #5
         + Integer [2131034119]
-      [220] invokevirtual #59
+      [220] invokevirtual #58
         + Methodref [android/app/Dialog.findViewById (I)Landroid/view/View;]
-      [223] checkcast #43
+      [223] checkcast #42
         + Class [android/widget/TextView]
       [226] astore v9
       [228] aload v9
       [230] aload_0 v0
       [231] ldc #4
         + Integer [2130968586]
-      [233] invokevirtual #80
+      [233] invokevirtual #79
         + Methodref [com/unome/silenceme/app/SilenceMeActivity.getString (I)Ljava/lang/String;]
-      [236] invokestatic #66
+      [236] invokestatic #65
         + Methodref [android/text/Html.fromHtml (Ljava/lang/String;)Landroid/text/Spanned;]
-      [239] invokevirtual #74
+      [239] invokevirtual #73
         + Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
       [242] aload v8
       [244] ldc #16
         + String [Introduction]
-      [246] invokevirtual #61
+      [246] invokevirtual #60
         + Methodref [android/app/Dialog.setTitle (Ljava/lang/CharSequence;)V]
       [249] aload v8
-      [251] invokevirtual #62
+      [251] invokevirtual #61
         + Methodref [android/app/Dialog.show ()V]
       [254] goto +33 (target=287)
       [257] aload v7
-      [259] ldc #27
-        + String [oldVersionExsits]
+      [259] ldc #26
+        + String [oldVersionExists]
       [261] iconst_1
-      [262] invokeinterface #92
+      [262] invokeinterface #91
         + InterfaceMethodref [android/content/SharedPreferences$Editor.putBoolean (Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;]
       [267] pop
       [268] aload v7
-      [270] ldc #29
-        + String [v3FirstRun]
+      [270] ldc #28
+        + String [v4FirstRun]
       [272] iconst_0
-      [273] invokeinterface #92
+      [273] invokeinterface #91
         + InterfaceMethodref [android/content/SharedPreferences$Editor.putBoolean (Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;]
       [278] pop
       [279] aload v7
-      [281] invokeinterface #91
+      [281] invokeinterface #90
         + InterfaceMethodref [android/content/SharedPreferences$Editor.commit ()Z]
       [286] pop
       [287] aload_0 v0
-      [288] new #32
+      [288] new #31
         + Class [android/content/Intent]
       [291] dup
       [292] aload_0 v0
-      [293] ldc #46
+      [293] ldc #45
         + Class [com/unome/silenceme/app/CalendarChangeService]
-      [295] invokespecial #63
+      [295] invokespecial #62
         + Methodref [android/content/Intent.<init> (Landroid/content/Context;Ljava/lang/Class;)V]
-      [298] invokevirtual #84
+      [298] invokevirtual #83
         + Methodref [com/unome/silenceme/app/SilenceMeActivity.startService (Landroid/content/Intent;)Landroid/content/ComponentName;]
       [301] pop
-      [302] new #31
+      [302] new #30
         + Class [android/app/Dialog]
       [305] dup
       [306] aload_0 v0
-      [307] invokespecial #58
+      [307] invokespecial #57
         + Methodref [android/app/Dialog.<init> (Landroid/content/Context;)V]
       [310] astore v8
       [312] aload v8
       [314] ldc #1
         + Integer [2130903041]
-      [316] invokevirtual #60
+      [316] invokevirtual #59
         + Methodref [android/app/Dialog.setContentView (I)V]
       [319] aload v8
       [321] ldc #5
         + Integer [2131034119]
-      [323] invokevirtual #59
+      [323] invokevirtual #58
         + Methodref [android/app/Dialog.findViewById (I)Landroid/view/View;]
-      [326] checkcast #43
+      [326] checkcast #42
         + Class [android/widget/TextView]
       [329] astore v9
       [331] aload v9
       [333] aload_0 v0
       [334] ldc #4
         + Integer [2130968586]
-      [336] invokevirtual #80
+      [336] invokevirtual #79
         + Methodref [com/unome/silenceme/app/SilenceMeActivity.getString (I)Ljava/lang/String;]
-      [339] invokestatic #66
+      [339] invokestatic #65
         + Methodref [android/text/Html.fromHtml (Ljava/lang/String;)Landroid/text/Spanned;]
-      [342] invokevirtual #74
+      [342] invokevirtual #73
         + Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
       [345] aload v8
       [347] ldc #16
         + String [Introduction]
-      [349] invokevirtual #61
+      [349] invokevirtual #60
         + Methodref [android/app/Dialog.setTitle (Ljava/lang/CharSequence;)V]
       [352] aload v8
-      [354] invokevirtual #62
+      [354] invokevirtual #61
         + Methodref [android/app/Dialog.show ()V]
       [357] aload v4
       [359] ldc #19
         + String [allEvents]
       [361] iconst_m1
-      [362] invokeinterface #90
+      [362] invokeinterface #89
         + InterfaceMethodref [android/content/SharedPreferences.getInt (Ljava/lang/String;I)I]
       [367] ifne +11 (target=378)
       [370] aload_3 v3
       [371] iconst_1
-      [372] invokevirtual #72
+      [372] invokevirtual #71
         + Methodref [android/widget/RadioButton.setChecked (Z)V]
       [375] goto +8 (target=383)
       [378] aload_2 v2
       [379] iconst_1
-      [380] invokevirtual #72
+      [380] invokevirtual #71
         + Methodref [android/widget/RadioButton.setChecked (Z)V]
       [383] aload_2 v2
-      [384] new #52
+      [384] new #51
         + Class [k]
       [387] dup
       [388] aload_0 v0
       [389] aload_3 v3
       [390] aload v4
-      [392] invokespecial #86
+      [392] invokespecial #85
         + Methodref [k.<init> (Lcom/unome/silenceme/app/SilenceMeActivity;Landroid/widget/RadioButton;Landroid/content/SharedPreferences;)V]
-      [395] invokevirtual #73
+      [395] invokevirtual #72
         + Methodref [android/widget/RadioButton.setOnClickListener (Landroid/view/View$OnClickListener;)V]
       [398] aload_3 v3
-      [399] new #53
+      [399] new #52
         + Class [l]
       [402] dup
       [403] aload_0 v0
       [404] aload_2 v2
       [405] aload v4
-      [407] invokespecial #87
+      [407] invokespecial #86
         + Methodref [l.<init> (Lcom/unome/silenceme/app/SilenceMeActivity;Landroid/widget/RadioButton;Landroid/content/SharedPreferences;)V]
-      [410] invokevirtual #73
+      [410] invokevirtual #72
         + Methodref [android/widget/RadioButton.setOnClickListener (Landroid/view/View$OnClickListener;)V]
       [413] return
       Code attribute exceptions (count = 0):
@@ -7061,7 +7059,7 @@ Methods (count = 3):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 258, locals = 6, stack = 4):
       [0] aload_1 v1
-      [1] invokevirtual #67
+      [1] invokevirtual #66
         + Methodref [android/view/View.getId ()I]
       [4] ldc #9
         + Integer [2131034123]
@@ -7069,42 +7067,42 @@ Methods (count = 3):
       [9] aload_0 v0
       [10] ldc #8
         + Integer [2131034122]
-      [12] invokevirtual #79
+      [12] invokevirtual #78
         + Methodref [com/unome/silenceme/app/SilenceMeActivity.findViewById (I)Landroid/view/View;]
-      [15] checkcast #41
+      [15] checkcast #40
         + Class [android/widget/EditText]
       [18] astore_2 v2
       [19] aload_2 v2
-      [20] invokevirtual #69
+      [20] invokevirtual #68
         + Methodref [android/widget/EditText.getText ()Landroid/text/Editable;]
-      [23] invokeinterface #94
+      [23] invokeinterface #93
         + InterfaceMethodref [android/text/Editable.toString ()Ljava/lang/String;]
       [28] ldc #13
         + String []
-      [30] invokevirtual #85
+      [30] invokevirtual #84
         + Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
       [33] ifeq +14 (target=47)
       [36] aload_0 v0
       [37] ldc #17
         + String [Please Enter a Key word]
       [39] iconst_1
-      [40] invokestatic #75
+      [40] invokestatic #74
         + Methodref [android/widget/Toast.makeText (Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;]
-      [43] invokevirtual #76
+      [43] invokevirtual #75
         + Methodref [android/widget/Toast.show ()V]
       [46] return
       [47] aload_0 v0
-      [48] invokestatic #65
+      [48] invokestatic #64
         + Methodref [android/preference/PreferenceManager.getDefaultSharedPreferences (Landroid/content/Context;)Landroid/content/SharedPreferences;]
       [51] astore_3 v3
       [52] aload_0 v0
-      [53] getfield #54
+      [53] getfield #53
         + Fieldref [com/unome/silenceme/app/SilenceMeActivity.a Lb;]
       [56] aload_0 v0
       [57] aload_2 v2
-      [58] invokevirtual #69
+      [58] invokevirtual #68
         + Methodref [android/widget/EditText.getText ()Landroid/text/Editable;]
-      [61] invokevirtual #78
+      [61] invokevirtual #77
         + Methodref [b.a (Landroid/content/Context;Landroid/text/Editable;)I]
       [64] iconst_1
       [65] ificmpne +55 (target=120)
@@ -7112,140 +7110,140 @@ Methods (count = 3):
       [69] ldc #19
         + String [allEvents]
       [71] iconst_m1
-      [72] invokeinterface #90
+      [72] invokeinterface #89
         + InterfaceMethodref [android/content/SharedPreferences.getInt (Ljava/lang/String;I)I]
       [77] ifne +43 (target=120)
       [80] aload_2 v2
-      [81] invokevirtual #69
+      [81] invokevirtual #68
         + Methodref [android/widget/EditText.getText ()Landroid/text/Editable;]
-      [84] invokeinterface #94
+      [84] invokeinterface #93
         + InterfaceMethodref [android/text/Editable.toString ()Ljava/lang/String;]
       [89] astore v4
-      [91] new #32
+      [91] new #31
         + Class [android/content/Intent]
       [94] dup
       [95] aload_0 v0
-      [96] ldc #47
+      [96] ldc #46
         + Class [com/unome/silenceme/app/CompileKeyWord]
-      [98] invokespecial #63
+      [98] invokespecial #62
         + Methodref [android/content/Intent.<init> (Landroid/content/Context;Ljava/lang/Class;)V]
       [101] astore v5
       [103] aload v5
       [105] ldc #23
         + String [keyword]
       [107] aload v4
-      [109] invokevirtual #64
+      [109] invokevirtual #63
         + Methodref [android/content/Intent.putExtra (Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;]
       [112] pop
       [113] aload_0 v0
       [114] aload v5
-      [116] invokevirtual #84
+      [116] invokevirtual #83
         + Methodref [com/unome/silenceme/app/SilenceMeActivity.startService (Landroid/content/Intent;)Landroid/content/ComponentName;]
       [119] pop
       [120] aload_2 v2
       [121] ldc #13
         + String []
-      [123] invokevirtual #71
+      [123] invokevirtual #70
         + Methodref [android/widget/EditText.setText (Ljava/lang/CharSequence;)V]
       [126] aload_0 v0
       [127] ldc #22
         + String [input_method]
-      [129] invokevirtual #81
+      [129] invokevirtual #80
         + Methodref [com/unome/silenceme/app/SilenceMeActivity.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
-      [132] checkcast #40
+      [132] checkcast #39
         + Class [android/view/inputmethod/InputMethodManager]
       [135] astore v4
       [137] aload v4
       [139] aload_2 v2
-      [140] invokevirtual #70
+      [140] invokevirtual #69
         + Methodref [android/widget/EditText.getWindowToken ()Landroid/os/IBinder;]
       [143] iconst_0
-      [144] invokevirtual #68
+      [144] invokevirtual #67
         + Methodref [android/view/inputmethod/InputMethodManager.hideSoftInputFromWindow (Landroid/os/IBinder;I)Z]
       [147] pop
       [148] aload_1 v1
-      [149] invokevirtual #67
+      [149] invokevirtual #66
         + Methodref [android/view/View.getId ()I]
       [152] ldc #12
         + Integer [2131034127]
       [154] ificmpne +20 (target=174)
-      [157] new #32
+      [157] new #31
         + Class [android/content/Intent]
       [160] dup
       [161] aload_0 v0
-      [162] ldc #48
+      [162] ldc #47
         + Class [com/unome/silenceme/app/DisplayKeywords]
-      [164] invokespecial #63
+      [164] invokespecial #62
         + Methodref [android/content/Intent.<init> (Landroid/content/Context;Ljava/lang/Class;)V]
       [167] astore_2 v2
       [168] aload_0 v0
       [169] aload_2 v2
       [170] iconst_0
-      [171] invokevirtual #83
+      [171] invokevirtual #82
         + Methodref [com/unome/silenceme/app/SilenceMeActivity.startActivityForResult (Landroid/content/Intent;I)V]
       [174] aload_1 v1
-      [175] invokevirtual #67
+      [175] invokevirtual #66
         + Methodref [android/view/View.getId ()I]
       [178] ldc #6
         + Integer [2131034120]
       [180] ificmpne +20 (target=200)
-      [183] new #32
+      [183] new #31
         + Class [android/content/Intent]
       [186] dup
       [187] aload_0 v0
-      [188] ldc #49
+      [188] ldc #48
         + Class [com/unome/silenceme/app/SettingsActivity]
-      [190] invokespecial #63
+      [190] invokespecial #62
         + Methodref [android/content/Intent.<init> (Landroid/content/Context;Ljava/lang/Class;)V]
       [193] astore_2 v2
       [194] aload_0 v0
       [195] aload_2 v2
       [196] iconst_0
-      [197] invokevirtual #83
+      [197] invokevirtual #82
         + Methodref [com/unome/silenceme/app/SilenceMeActivity.startActivityForResult (Landroid/content/Intent;I)V]
       [200] aload_1 v1
-      [201] invokevirtual #67
+      [201] invokevirtual #66
         + Methodref [android/view/View.getId ()I]
       [204] ldc #7
         + Integer [2131034121]
       [206] ificmpne +51 (target=257)
-      [209] new #31
+      [209] new #30
         + Class [android/app/Dialog]
       [212] dup
       [213] aload_0 v0
-      [214] invokespecial #58
+      [214] invokespecial #57
         + Methodref [android/app/Dialog.<init> (Landroid/content/Context;)V]
       [217] astore_2 v2
       [218] aload_2 v2
       [219] ldc #1
         + Integer [2130903041]
-      [221] invokevirtual #60
+      [221] invokevirtual #59
         + Methodref [android/app/Dialog.setContentView (I)V]
       [224] aload_2 v2
       [225] ldc #15
         + String [Help]
-      [227] invokevirtual #61
+      [227] invokevirtual #60
         + Methodref [android/app/Dialog.setTitle (Ljava/lang/CharSequence;)V]
       [230] aload_2 v2
       [231] ldc #5
         + Integer [2131034119]
-      [233] invokevirtual #59
+      [233] invokevirtual #58
         + Methodref [android/app/Dialog.findViewById (I)Landroid/view/View;]
-      [236] checkcast #43
+      [236] checkcast #42
         + Class [android/widget/TextView]
       [239] astore_3 v3
       [240] aload_3 v3
       [241] aload_0 v0
       [242] ldc #3
         + Integer [2130968585]
-      [244] invokevirtual #80
+      [244] invokevirtual #79
         + Methodref [com/unome/silenceme/app/SilenceMeActivity.getString (I)Ljava/lang/String;]
-      [247] invokestatic #66
+      [247] invokestatic #65
         + Methodref [android/text/Html.fromHtml (Ljava/lang/String;)Landroid/text/Spanned;]
-      [250] invokevirtual #74
+      [250] invokevirtual #73
         + Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
       [253] aload_2 v2
-      [254] invokevirtual #62
+      [254] invokevirtual #61
         + Methodref [android/app/Dialog.show ()V]
       [257] return
       Code attribute exceptions (count = 0):

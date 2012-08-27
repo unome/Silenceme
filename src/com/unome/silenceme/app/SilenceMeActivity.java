@@ -16,7 +16,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class SilenceMeActivity extends Activity {
-	/** Called when the activity is first created. **/
 	DBhelper dbhelper;
 	String TAG = "Silenceme";
 	@Override
@@ -34,7 +33,6 @@ public class SilenceMeActivity extends Activity {
 			SharedPreferences.Editor editor = wmbPreference.edit();
 			if (!oldVersionExists) //if no old version exists put new values.
 			{
-				//start a service.
 				editor.putBoolean("v4FirstRun",false);
 				editor.putInt("CurrPhState",-1);
 				editor.putInt("allEvents",0);//To maintain the current Status
