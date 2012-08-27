@@ -1,7 +1,11 @@
 com.unome.silenceme.app.CalendarChangeService
+com.unome.silenceme.app.CalendarChangeService: CalendarChangeService()
 com.unome.silenceme.app.CalendarObserverService
+com.unome.silenceme.app.CalendarObserverService: CalendarObserverService()
 com.unome.silenceme.app.CompileKeyWord
+com.unome.silenceme.app.CompileKeyWord: CompileKeyWord()
 com.unome.silenceme.app.DisplayKeywords
+com.unome.silenceme.app.DisplayKeywords: DisplayKeywords()
 com.unome.silenceme.app.DisplayKeywords: void onClickHandler(android.view.View)
 com.unome.silenceme.app.R$drawable: int helpdialog
 com.unome.silenceme.app.R$drawable: int ic_launcher
@@ -50,12 +54,20 @@ com.unome.silenceme.app.R$string: int hello
 com.unome.silenceme.app.R$string: int helpText
 com.unome.silenceme.app.R$string: int introText
 com.unome.silenceme.app.SetBack
+com.unome.silenceme.app.SetBack: SetBack()
 com.unome.silenceme.app.SetBackService
+com.unome.silenceme.app.SetBackService: SetBackService()
 com.unome.silenceme.app.SetSilentAll
+com.unome.silenceme.app.SetSilentAll: SetSilentAll()
 com.unome.silenceme.app.SettingsActivity
+com.unome.silenceme.app.SettingsActivity: SettingsActivity()
 com.unome.silenceme.app.SettingsActivity: void onClickHandler(android.view.View)
 com.unome.silenceme.app.SilenceMeActivity
+com.unome.silenceme.app.SilenceMeActivity: SilenceMeActivity()
 com.unome.silenceme.app.SilenceMeActivity: void onClickHandler(android.view.View)
 com.unome.silenceme.app.SilencePhone
+com.unome.silenceme.app.SilencePhone: SilencePhone()
 com.unome.silenceme.app.SilencePhoneService
+com.unome.silenceme.app.SilencePhoneService: SilencePhoneService()
 com.unome.silenceme.app.StartServiceOnBoot
+com.unome.silenceme.app.StartServiceOnBoot: StartServiceOnBoot()

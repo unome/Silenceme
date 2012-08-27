@@ -7,7 +7,6 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.text.Html;
-import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
@@ -28,28 +27,44 @@ public class SilenceMeActivity extends Activity {
 		final RadioButton rBNoSilenceAll=(RadioButton)findViewById(R.id.rB_NoSilenceAll);
 		dbhelper = new DBhelper(this);
 		final SharedPreferences wmbPreference = PreferenceManager.getDefaultSharedPreferences(this);
-		boolean isv2Run = wmbPreference.getBoolean("v2Run", true);
-		if (isv2Run)
+		boolean oldVersionExists = wmbPreference.getBoolean("oldVersionExists", false);
+		boolean v4FirstRun=wmbPreference.getBoolean("v4FirstRun", true);
+		if(v4FirstRun)
 		{
-			//start a service.
-			this.startService(new Intent(this,CalendarChangeService.class));
 			SharedPreferences.Editor editor = wmbPreference.edit();
-			editor.putBoolean("v2Run", false);
-			editor.putInt("CurrPhState",-1);
-			editor.putInt("allEvents",0);//To maintain the current Status
-			editor.putInt("currentEventId", -1);
-			editor.putInt("desiredPhState", 1);
-			editor.putInt("monitorCal", 0);
-			editor.putInt("monitorBusy",0);
-			editor.putInt("reviewDone", 0);
-			editor.commit();
+			if (!oldVersionExists) //if no old version exists put new values.
+			{
+				//start a service.
+				editor.putBoolean("v4FirstRun",false);
+				editor.putInt("CurrPhState",-1);
+				editor.putInt("allEvents",0);//To maintain the current Status
+				editor.putInt("currentEventId", -1);
+				editor.putInt("desiredPhState", 1);
+				editor.putInt("monitorCal", 0);
+				editor.putInt("monitorBusy",0);
+				editor.putInt("reviewDone", 0);
+				editor.putBoolean("oldVersionExists",true);
+				editor.commit();
+				final Dialog dialog = new Dialog(this);
+				dialog.setContentView(R.layout.helpfile);
+				TextView helpText = (TextView)dialog.findViewById(R.id.textViewHelp);
+				helpText.setText(Html.fromHtml(getString(R.string.introText)));
+				dialog.setTitle("Introduction");
+				dialog.show();
+			}
+			else //if old version exists do nothing in v3
+			{
+				editor.putBoolean("oldVersionExists",true);
+				editor.putBoolean("v4FirstRun",false);
+				editor.commit();
+			}
+			this.startService(new Intent(this,CalendarChangeService.class));
 			final Dialog dialog = new Dialog(this);
 			dialog.setContentView(R.layout.helpfile);
 			TextView helpText = (TextView)dialog.findViewById(R.id.textViewHelp);
 			helpText.setText(Html.fromHtml(getString(R.string.introText)));
 			dialog.setTitle("Introduction");
 			dialog.show();
-
 		}
 		if(wmbPreference.getInt("allEvents", -1)==0)
 			rBNoSilenceAll.setChecked(true);
